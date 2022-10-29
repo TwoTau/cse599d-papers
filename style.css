@@ -6,14 +6,17 @@
 
 body {
 	padding: 32px;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+	font-size: 16px;
 }
 
 .all-container {
 	display: grid;
-	grid-template-columns: auto 600px auto;
+	grid-template-columns: 30vw auto auto;
+	gap: 12px;
 }
 
-.preview-container > div {
+.preview-container>div {
 	max-width: 100% !important;
 }
 
@@ -25,23 +28,19 @@ body {
 }
 
 .figure {
-	box-sizing: border-box;
-	max-width: 100%;
-	max-height: 300px;
-	overflow-y: auto;
-	overflow-x: hidden;
-	padding: 12px;
-	transition: 0.3s ease-out;
-	height: min-content;
-	border-radius: 4px;
 	display: flex;
 	flex-flow: row wrap;
 	justify-content: center;
 	gap: 12px;
-	cursor: pointer;
 
-	background: white;
-	border: 1px solid #bbb;
+	max-width: 100%;
+	max-height: 300px;
+	height: min-content;
+	overflow-y: auto;
+	overflow-x: hidden;
+
+	cursor: pointer;
+	transition: 0.3s ease-out;
 }
 
 .figure.big {
@@ -54,7 +53,6 @@ body {
 }
 
 .figure figcaption {
-	font-family: "Helvetica Neue", sans-serif;
 	font-size: smaller;
 	color: #777;
 }
@@ -63,12 +61,68 @@ body {
 	color: black;
 }
 
+.selected-abstract,
+.figure {
+	padding: 12px;
+	border: 1px solid #bbb;
+	border-radius: 4px;
+	background: white;
+}
+
+.selected-abstract {
+	max-height: 200px;
+	overflow-y: auto;
+	margin: 12px 0;
+}
+
+.paper-link {
+	background: #0366d6;
+	color: white;
+	opacity: 0.5;
+	font-size: small;
+	border-radius: 200px;
+	padding: 0 8px 2px;
+}
+
+.paper-link:hover {
+	opacity: 1;
+	text-decoration: none;
+}
+
+li .paper-link {
+	position: absolute;
+	left: 32px;
+}
+
+li {
+	margin: 12px 0;
+	margin-left: 54px;
+	list-style-type: none;
+}
+
 figure img {
 	max-width: 100%;
 }
 
 summary {
 	cursor: pointer;
+}
+
+form {
+	width: fit-content !important;
+}
+
+.oi-ec050e select {
+	width: 33%;
+}
+
+a {
+	color: #0366d6;
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
 }
 
 ::-webkit-scrollbar {
