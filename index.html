@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>CSE 599D - Literature Review</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+	<div id="observablehq-viewof-selectPaper-be34c234"></div>
+	<div id="observablehq-all-be34c234"></div>
+
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@observablehq/inspector@3/dist/inspector.css">
+	<script type="module">
+		import { Runtime, Inspector } from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+		import define from "https://api.observablehq.com/d/3bdf38021211a0e7.js?v=3";
+		new Runtime().module(define, name => {
+			if (name === "viewof selectPaper") return new Inspector(document.querySelector("#observablehq-viewof-selectPaper-be34c234"));
+			if (name === "all") return new Inspector(document.querySelector("#observablehq-all-be34c234"));
+			return ["chart", "preview", "figureList", "viewof selectFigure"].includes(name);
+		});
+	</script>
+</body>
+
+</html>

@@ -1,0 +1,90 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+body {
+	padding: 32px;
+}
+
+.all-container {
+	display: grid;
+	grid-template-columns: auto 600px auto;
+}
+
+.preview-container > div {
+	max-width: 100% !important;
+}
+
+.figure-list {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	gap: 12px;
+	/* grid-auto-flow: row dense; */
+}
+
+.figure {
+	box-sizing: border-box;
+	max-width: 100%;
+	max-height: 300px;
+	overflow-y: auto;
+	overflow-x: hidden;
+	padding: 12px;
+	transition: 0.3s ease-out;
+	height: min-content;
+	border-radius: 4px;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+	gap: 12px;
+	cursor: pointer;
+
+	background: white;
+	border: 1px solid #bbb;
+}
+
+.figure.big {
+	max-height: 600px;
+	grid-column: 1 / span 3;
+}
+
+.figure:hover {
+	background: #B9D9F8;
+}
+
+.figure figcaption {
+	font-family: "Helvetica Neue", sans-serif;
+	font-size: smaller;
+	color: #777;
+}
+
+.figure:hover figcaption {
+	color: black;
+}
+
+figure img {
+	max-width: 100%;
+}
+
+summary {
+	cursor: pointer;
+}
+
+::-webkit-scrollbar {
+	width: 6px;
+	background: var(--bg-color);
+}
+
+::-webkit-scrollbar-thumb {
+	background: #aaa;
+	border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background: #777;
+}
+
+::-webkit-scrollbar-thumb:active {
+	background: #333;
+}
